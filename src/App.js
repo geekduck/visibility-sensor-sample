@@ -30,7 +30,11 @@ const CurrentTimer = () => {
             partialVisibility={true} // 表示領域にちょっとでも入っていたらisVisible=trueと判定させる。
             offset={{top: 100, bottom: 100}} // 見た目でわかりやすいように、上下100pxの範囲は表示領域外にする。
         >
-            <div className="CurrentTimer">{dayjs(currentTime).format('YYYY/MM/DD HH:mm:ss.SSS')}</div>
+            {
+                ({isVisible}) => isVisible
+                    ? <div className="CurrentTimer">{dayjs(currentTime).format('YYYY/MM/DD HH:mm:ss.SSS')}</div>
+                    : <div className="CurrentTimer"/> // 表示されていない場合は、子要素を表示しない。
+            }
         </VisibilitySensor>
     );
 };
