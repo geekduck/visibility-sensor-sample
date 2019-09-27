@@ -1,25 +1,35 @@
-.App {
-  padding: 10px;
-  height: 2000px;
+.upper-border {
+    top: 0;
+    position: fixed;
+    color: #777;
+    background-color: #ccc;
+    width: 100%;
+    height: 100px;
+    left: 0;
 }
 
-.App .up {
-  position: fixed;
-  width: 100%;
-  top: 100px;
+.lower-border {
+    bottom: 0;
+    position: fixed;
+    color: #777;
+    background-color: #ccc;
+    width: 100%;
+    height: 100px;
+    left: 0;
 }
 
-.App .down {
-  position: fixed;
-  width: 100%;
-  top: 500px;
+.lower-border span {
+    position: absolute;
+    bottom: 0;
 }
 
 .CurrentTimer {
-  position: relative;
-  top: 700px;
-  width: 220px;
-  border: 1px solid black;
-  padding: 5px;
-  margin-left: 20px;
+    z-index: 100;
+    position: relative;
+    background-color: white;
+    top: 700px;
+    width: 220px;
+    height: 25px;
+    border: 1px solid black;
+    margin: 1500px 0 1500px 120px;
 }
